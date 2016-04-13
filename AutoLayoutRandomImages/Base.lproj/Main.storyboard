@@ -41,14 +41,14 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v1k-EW-fGX">
                                             <rect key="frame" x="0.0" y="8" width="600" height="283.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="283.5" id="BR4-D9-xtH"/>
+                                                <constraint firstAttribute="height" priority="750" constant="283.5" id="BR4-D9-xtH"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="topMargin" secondItem="v1k-EW-fGX" secondAttribute="top" id="3pA-yN-Wgu"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="v1k-EW-fGX" secondAttribute="bottom" id="A6O-72-28G"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="v1k-EW-fGX" secondAttribute="trailing" constant="-8" id="OgI-ni-KaQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="v1k-EW-fGX" secondAttribute="bottom" id="xku-Q4-KXM"/>
                                         <constraint firstItem="v1k-EW-fGX" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" constant="-8" id="zfW-3g-foo"/>
                                     </constraints>
                                 </tableViewCellContentView>

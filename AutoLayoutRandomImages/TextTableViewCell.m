@@ -21,4 +21,23 @@
     // Configure the view for the selected state
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    [NSObject cancelPreviousPerformRequestsWithTarget: self];
+}
+
+- (void)setTextDelayed:(NSString *)text
+{
+    [self.Text setText:text];
+    [self.parent beginUpdates];
+    [self.parent endUpdates];
+}
+
+- (void)setTextAsync:(NSString *)text
+{
+    [self performSelector:@selector(setTextDelayed:) withObject:text afterDelay: 1];
+}
+
+
 @end

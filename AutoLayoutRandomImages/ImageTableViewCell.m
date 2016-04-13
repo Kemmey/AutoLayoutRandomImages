@@ -21,4 +21,24 @@
     // Configure the view for the selected state
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    [NSObject cancelPreviousPerformRequestsWithTarget: self];
+}
+
+- (void)setImageDelayed:(UIImage *)image
+{
+    [self.Image setImage:image];
+    CGFloat imageViewWidth = self.contentView.bounds.size.width;
+    self.ImageHeightConstraint.constant = image.size.height / image.size.width * imageViewWidth;
+    [self.parent beginUpdates];
+    [self.parent endUpdates];
+}
+
+- (void)setImageAsync:(UIImage *)image
+{
+    [self performSelector:@selector(setImageDelayed:) withObject:image afterDelay: 0.3f];
+}
+
 @end

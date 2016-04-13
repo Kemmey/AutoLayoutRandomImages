@@ -11,5 +11,8 @@
 @interface TextTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *Text;
+@property (weak, nonatomic) UITableView *parent;
+
+- (void)setTextAsync:(NSString *)text;
 
 @end

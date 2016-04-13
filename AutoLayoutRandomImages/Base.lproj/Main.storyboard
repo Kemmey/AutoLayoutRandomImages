@@ -40,6 +40,9 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v1k-EW-fGX">
                                             <rect key="frame" x="0.0" y="8" width="600" height="283.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="283.5" id="BR4-D9-xtH"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -52,6 +55,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="Image" destination="v1k-EW-fGX" id="A6z-yw-02V"/>
+                                    <outlet property="ImageHeightConstraint" destination="BR4-D9-xtH" id="SOd-Tt-ad5"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="TextCell" rowHeight="44" id="ozD-Yc-4Se" customClass="TextTableViewCell">
